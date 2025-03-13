@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const products = [
   {
@@ -59,12 +60,12 @@ const Products = () => {
                   </span>
                 </h3>
                 <p className="post">{product.description}</p>
-                <a
-                  href={product.link}
+                <Link
+                  to={product.link}
                   className="bg-blue btn rounded-0 btn-sm text-light"
                 >
                   Know More
-                </a>
+                </Link>
               </div>
             </div>
           ))}

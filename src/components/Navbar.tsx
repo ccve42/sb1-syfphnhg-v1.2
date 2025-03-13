@@ -184,8 +184,8 @@ const Navbar = () => {
         className={`md:hidden mobile-menu-2025 ${isMenuOpen ? 'open' : ''}`}
       >
         <div className="px-4 py-4 space-y-2">
-          <a href="/" className="mobile-menu-link">{t('nav.home')}</a>
-          <a href="/about" className="mobile-menu-link">{t('nav.about')}</a>
+          <Link to="/" className="mobile-menu-link">{t('nav.home')}</Link>
+          <Link to="/about" className="mobile-menu-link">{t('nav.about')}</Link>
           
           {/* Mobile Products Accordion */}
           <div className="mobile-accordion">
@@ -198,22 +198,22 @@ const Navbar = () => {
             </button>
             
             <div className={`mobile-accordion-content ${activeDropdown === 'mobile-products' ? 'open' : ''}`}>
-              <a href="/work-rest-hours" className="mobile-submenu-link">
+              <Link to="/work-rest-hours" className="mobile-submenu-link">
                 <span className="font-medium">{t('products.horado.title')}</span>
                 <span className="text-sm text-gray-500">{t('products.horado.desc')}</span>
-              </a>
-              <a href="/surveys-inspection" className="mobile-submenu-link">
+              </Link>
+              <Link to="/surveys-inspection" className="mobile-submenu-link">
                 <span className="font-medium">{t('products.argus.title')}</span>
                 <span className="text-sm text-gray-500">{t('products.argus.desc')}</span>
-              </a>
-              <a href="/ship-guard" className="mobile-submenu-link">
+              </Link>
+              <Link to="/ship-guard" className="mobile-submenu-link">
                 <span className="font-medium">{t('products.maris.title')}</span>
                 <span className="text-sm text-gray-500">{t('products.maris.desc')}</span>
-              </a>
-              <a href="/ship-spares-logistics" className="mobile-submenu-link">
+              </Link>
+              <Link to="/ship-spares-logistics" className="mobile-submenu-link">
                 <span className="font-medium">{t('products.doris.title')}</span>
                 <span className="text-sm text-gray-500">{t('products.doris.desc')}</span>
-              </a>
+              </Link>
             </div>
           </div>
           
@@ -228,13 +228,13 @@ const Navbar = () => {
             </button>
             
             <div className={`mobile-accordion-content ${activeDropdown === 'mobile-services' ? 'open' : ''}`}>
-              <a href="/technology-and-ai" className="mobile-submenu-link">{t('services.tech.title')}</a>
-              <a href="/chartering-consultancy" className="mobile-submenu-link">{t('services.chartering.title')}</a>
-              <a href="/marketing" className="mobile-submenu-link">{t('services.marketing.title')}</a>
+              <Link to="/technology-and-ai" className="mobile-submenu-link">{t('services.tech.title')}</Link>
+              <Link to="/chartering-consultancy" className="mobile-submenu-link">{t('services.chartering.title')}</Link>
+              <Link to="/marketing" className="mobile-submenu-link">{t('services.marketing.title')}</Link>
             </div>
           </div>
           
-          <a href="/contact" className="mobile-menu-link">{t('nav.contact')}</a>
+          <Link to="/contact" className="mobile-menu-link">{t('nav.contact')}</Link>
           
           {/* Mobile Language Switcher */}
           <div className="pt-4 border-t border-gray-200">

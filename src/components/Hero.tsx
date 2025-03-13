@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const slides = [
   {
@@ -79,9 +80,9 @@ const Hero = () => {
               </p>
             </div>
             <div className={`${isAnimating ? 'slide-in-left delay-400' : 'opacity-0'} px-4 sm:px-0`}>
-              <button className="w-full sm:w-auto bg-white text-blue-900 px-8 py-4 uppercase text-sm font-medium tracking-wider hover:bg-blue-50 transition-colors rounded-lg sm:rounded-none">
+              <Link to="/about" className="inline-block w-full sm:w-auto bg-white text-blue-900 px-8 py-4 uppercase text-sm font-medium tracking-wider hover:bg-blue-50 transition-colors rounded-lg sm:rounded-none">
                 Know More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

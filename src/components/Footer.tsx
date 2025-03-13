@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Linkedin, Mail, Phone, MapPin, Send, ArrowRight, Ship, ShieldCheck, Anchor, ExternalLink } from 'lucide-react';
 import { useLanguage } from '/src/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -36,9 +37,9 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-y-0 md:gap-x-8">
             {/* Logo and Info */}
             <div className="md:col-span-4 space-y-6">
-              <a href="/" className="inline-block">
+              <Link to="/" className="inline-block">
                 <img src="/img/iconlogotrans-white.png" alt="Icon Maritech" className="h-14 mb-6" />
-              </a>
+              </Link>
               
               <p className="text-blue-100 text-sm leading-relaxed">
                 Icon Maritech delivers advanced maritime technology solutions, 
@@ -72,9 +73,9 @@ const Footer = () => {
             <div className="md:col-span-2 space-y-6">
               <h3 className="footer-heading">{t('footer.company')}</h3>
               <ul className="space-y-3">
-                <li><a href="/" className="footer-link">{t('nav.home')}</a></li>
-                <li><a href="/about" className="footer-link">{t('nav.about')}</a></li>
-                <li><a href="/contact" className="footer-link">{t('nav.contact')}</a></li>
+                <li><Link to="/" className="footer-link">{t('nav.home')}</Link></li>
+                <li><Link to="/about" className="footer-link">{t('nav.about')}</Link></li>
+                <li><Link to="/contact" className="footer-link">{t('nav.contact')}</Link></li>
               </ul>
             </div>
 
@@ -83,28 +84,28 @@ const Footer = () => {
               <h3 className="footer-heading">{t('nav.products')}</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="/work-rest-hours" className="footer-link group flex items-center">
+                  <Link to="/work-rest-hours" className="footer-link group flex items-center">
                     <Ship className="w-3.5 h-3.5 mr-2 text-blue-400 group-hover:text-white transition-colors" />
                     <span>{t('products.horado.title')}</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/surveys-inspection" className="footer-link group flex items-center">
+                  <Link to="/surveys-inspection" className="footer-link group flex items-center">
                     <ShieldCheck className="w-3.5 h-3.5 mr-2 text-blue-400 group-hover:text-white transition-colors" />
                     <span>{t('products.argus.title')}</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/ship-guard" className="footer-link group flex items-center">
+                  <Link to="/ship-guard" className="footer-link group flex items-center">
                     <Anchor className="w-3.5 h-3.5 mr-2 text-blue-400 group-hover:text-white transition-colors" />
                     <span>{t('products.maris.title')}</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/ship-spares-logistics" className="footer-link group flex items-center">
+                  <Link to="/ship-spares-logistics" className="footer-link group flex items-center">
                     <Ship className="w-3.5 h-3.5 mr-2 text-blue-400 group-hover:text-white transition-colors" />
                     <span>{t('products.doris.title')}</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -113,9 +114,9 @@ const Footer = () => {
             <div className="md:col-span-2 space-y-6">
               <h3 className="footer-heading">{t('nav.services')}</h3>
               <ul className="space-y-3">
-                <li><a href="/technology-ai" className="footer-link">{t('services.tech.title')}</a></li>
-                <li><a href="/chartering-consultancy" className="footer-link">{t('services.chartering.title')}</a></li>
-                <li><a href="/marketing" className="footer-link">{t('services.marketing.title')}</a></li>
+                <li><Link to="/technology-ai" className="footer-link">{t('services.tech.title')}</Link></li>
+                <li><Link to="/chartering-consultancy" className="footer-link">{t('services.chartering.title')}</Link></li>
+                <li><Link to="/marketing" className="footer-link">{t('services.marketing.title')}</Link></li>
               </ul>
               
               <h3 className="footer-heading pt-4">Follow Us</h3>
@@ -188,9 +189,9 @@ const Footer = () => {
               </p>
             </div>
             <div className="mt-4 md:mt-0 flex justify-center md:justify-end space-x-6">
-              <a href="/privacy" className="text-sm text-blue-200 hover:text-white transition-colors">{t('footer.privacy')}</a>
-              <a href="/terms" className="text-sm text-blue-200 hover:text-white transition-colors">{t('footer.terms')}</a>
-              <a href="/cookies" className="text-sm text-blue-200 hover:text-white transition-colors">{t('footer.cookies')}</a>
+              <Link to="/privacy" className="text-sm text-blue-200 hover:text-white transition-colors">{t('footer.privacy')}</Link>
+              <Link to="/terms" className="text-sm text-blue-200 hover:text-white transition-colors">{t('footer.terms')}</Link>
+              <Link to="/cookies" className="text-sm text-blue-200 hover:text-white transition-colors">{t('footer.cookies')}</Link>
             </div>
           </div>
         </div>

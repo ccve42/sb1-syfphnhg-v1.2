@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -45,12 +46,12 @@ const Services = () => {
               <div className={service.fullWidth ? 'box-content-wide' : 'box-content'}>
                 <h3 className="title">{service.title}</h3>
                 <p className="post">{service.description}</p>
-                <a
-                  href={service.link}
+                <Link
+                  to={service.link}
                   className="bg-blue btn rounded-0 btn-sm text-light"
                 >
                   Know More
-                </a>
+                </Link>
               </div>
             </div>
           ))}
