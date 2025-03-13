@@ -24,9 +24,34 @@ const Navbar = () => {
     document.body.style.overflow = !isMenuOpen ? 'hidden' : 'auto';
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+
   const handleDropdownToggle = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
+
+  // Add useEffect to handle clicks outside dropdowns
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      // Close dropdowns when clicking outside
+      if (activeDropdown && !(event.target as Element).closest('.nav-dropdown-2025')) {
+        setActiveDropdown(null);
+      }
+      
+      // Close language menu when clicking outside
+      if (isLangMenuOpen && !(event.target as Element).closest('.language-selector')) {
+        setIsLangMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [activeDropdown, isLangMenuOpen]);
 
   return (
     <nav 
@@ -62,28 +87,28 @@ const Navbar = () => {
               
               <div className={`dropdown-menu-2025 ${activeDropdown === 'products' ? 'dropdown-active' : ''}`}>
                 <div className="dropdown-wrapper">
-                  <Link to="/work-rest-hours" className="dropdown-item-2025">
+                  <Link to="/work-rest-hours" className="dropdown-item-2025" onClick={() => setActiveDropdown(null)}>
                     <div className="dropdown-item-content">
                       <span className="dropdown-item-title">{t('products.horado.title')}</span>
                       <span className="dropdown-item-desc">{t('products.horado.desc')}</span>
                     </div>
                   </Link>
                   
-                  <Link to="/surveys-inspection" className="dropdown-item-2025">
+                  <Link to="/surveys-inspection" className="dropdown-item-2025" onClick={() => setActiveDropdown(null)}>
                     <div className="dropdown-item-content">
                       <span className="dropdown-item-title">Icon Argus</span>
                       <span className="dropdown-item-desc">Surveys & Inspections</span>
                     </div>
                   </Link>
                   
-                  <Link to="/ship-guard" className="dropdown-item-2025">
+                  <Link to="/ship-guard" className="dropdown-item-2025" onClick={() => setActiveDropdown(null)}>
                     <div className="dropdown-item-content">
                       <span className="dropdown-item-title">Icon Maris</span>
                       <span className="dropdown-item-desc">Ship Guard</span>
                     </div>
                   </Link>
                   
-                  <Link to="/ship-spares-logistics" className="dropdown-item-2025">
+                  <Link to="/ship-spares-logistics" className="dropdown-item-2025" onClick={() => setActiveDropdown(null)}>
                     <div className="dropdown-item-content">
                       <span className="dropdown-item-title">Icon Doris</span>
                       <span className="dropdown-item-desc">Ship Spares Logistics</span>
@@ -105,21 +130,21 @@ const Navbar = () => {
               
               <div className={`dropdown-menu-2025 ${activeDropdown === 'services' ? 'dropdown-active' : ''}`}>
                 <div className="dropdown-wrapper">
-                  <Link to="/technology-and-ai" className="dropdown-item-2025">
+                  <Link to="/technology-and-ai" className="dropdown-item-2025" onClick={() => setActiveDropdown(null)}>
                     <div className="dropdown-item-content">
                       <span className="dropdown-item-title">Technology & AI</span>
                       <span className="dropdown-item-desc">Smart solutions for maritime</span>
                     </div>
                   </Link>
                   
-                  <Link to="/chartering-consultancy" className="dropdown-item-2025">
+                  <Link to="/chartering-consultancy" className="dropdown-item-2025" onClick={() => setActiveDropdown(null)}>
                     <div className="dropdown-item-content">
                       <span className="dropdown-item-title">Chartering Consultancy</span>
                       <span className="dropdown-item-desc">Expert maritime guidance</span>
                     </div>
                   </Link>
                   
-                  <Link to="/marketing" className="dropdown-item-2025">
+                  <Link to="/marketing" className="dropdown-item-2025" onClick={() => setActiveDropdown(null)}>
                     <div className="dropdown-item-content">
                       <span className="dropdown-item-title">Marketing</span>
                       <span className="dropdown-item-desc">Strategic maritime marketing</span>
@@ -134,7 +159,7 @@ const Navbar = () => {
           
           {/* Right side actions */}
           <div className="hidden md:flex items-center space-x-4 ml-4">
-            <div className="relative">
+            <div className="relative language-selector">
               <button 
                 className="nav-icon-btn flex items-center gap-2"
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
@@ -184,8 +209,8 @@ const Navbar = () => {
         className={`md:hidden mobile-menu-2025 ${isMenuOpen ? 'open' : ''}`}
       >
         <div className="px-4 py-4 space-y-2">
-          <Link to="/" className="mobile-menu-link">{t('nav.home')}</Link>
-          <Link to="/about" className="mobile-menu-link">{t('nav.about')}</Link>
+          <Link to="/" className="mobile-menu-link" onClick={closeMenu}>{t('nav.home')}</Link>
+          <Link to="/about" className="mobile-menu-link" onClick={closeMenu}>{t('nav.about')}</Link>
           
           {/* Mobile Products Accordion */}
           <div className="mobile-accordion">
@@ -198,19 +223,19 @@ const Navbar = () => {
             </button>
             
             <div className={`mobile-accordion-content ${activeDropdown === 'mobile-products' ? 'open' : ''}`}>
-              <Link to="/work-rest-hours" className="mobile-submenu-link">
+              <Link to="/work-rest-hours" className="mobile-submenu-link" onClick={closeMenu}>
                 <span className="font-medium">{t('products.horado.title')}</span>
                 <span className="text-sm text-gray-500">{t('products.horado.desc')}</span>
               </Link>
-              <Link to="/surveys-inspection" className="mobile-submenu-link">
+              <Link to="/surveys-inspection" className="mobile-submenu-link" onClick={closeMenu}>
                 <span className="font-medium">{t('products.argus.title')}</span>
                 <span className="text-sm text-gray-500">{t('products.argus.desc')}</span>
               </Link>
-              <Link to="/ship-guard" className="mobile-submenu-link">
+              <Link to="/ship-guard" className="mobile-submenu-link" onClick={closeMenu}>
                 <span className="font-medium">{t('products.maris.title')}</span>
                 <span className="text-sm text-gray-500">{t('products.maris.desc')}</span>
               </Link>
-              <Link to="/ship-spares-logistics" className="mobile-submenu-link">
+              <Link to="/ship-spares-logistics" className="mobile-submenu-link" onClick={closeMenu}>
                 <span className="font-medium">{t('products.doris.title')}</span>
                 <span className="text-sm text-gray-500">{t('products.doris.desc')}</span>
               </Link>
@@ -228,13 +253,13 @@ const Navbar = () => {
             </button>
             
             <div className={`mobile-accordion-content ${activeDropdown === 'mobile-services' ? 'open' : ''}`}>
-              <Link to="/technology-and-ai" className="mobile-submenu-link">{t('services.tech.title')}</Link>
-              <Link to="/chartering-consultancy" className="mobile-submenu-link">{t('services.chartering.title')}</Link>
-              <Link to="/marketing" className="mobile-submenu-link">{t('services.marketing.title')}</Link>
+              <Link to="/technology-and-ai" className="mobile-submenu-link" onClick={closeMenu}>{t('services.tech.title')}</Link>
+              <Link to="/chartering-consultancy" className="mobile-submenu-link" onClick={closeMenu}>{t('services.chartering.title')}</Link>
+              <Link to="/marketing" className="mobile-submenu-link" onClick={closeMenu}>{t('services.marketing.title')}</Link>
             </div>
           </div>
           
-          <Link to="/contact" className="mobile-menu-link">{t('nav.contact')}</Link>
+          <Link to="/contact" className="mobile-menu-link" onClick={closeMenu}>{t('nav.contact')}</Link>
           
           {/* Mobile Language Switcher */}
           <div className="pt-4 border-t border-gray-200">
