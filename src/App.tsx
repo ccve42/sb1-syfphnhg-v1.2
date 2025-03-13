@@ -18,32 +18,30 @@ import { LanguageProvider } from '/src/contexts/LanguageContext';
 
 function App() {
   return (
-    <LanguageProvider>
-      <div className="min-h-screen bg-white">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <main>
-                <Products />
-                <Services />
-              </main>
-            </>
-          } />
-          <Route path="/about" element={<About />} />
-          <Route path="/work-rest-hours" element={<IconHorado />} />
-          <Route path="/surveys-inspection" element={<IconArgus />} />
-          <Route path="/ship-guard" element={<IconMaris />} />
-          <Route path="/ship-spares-logistics" element={<IconDoris />} />
-          <Route path="/technology-and-ai" element={<Technology />} />
-          <Route path="/chartering-consultancy" element={<Consultancy />} />
-          <Route path="/marketing" element={<Marketing />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </div>
-    </LanguageProvider>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Hero />
+            <main>
+              <Products />
+              <Services />
+            </main>
+          </>
+        } />
+        <Route path="/about" element={<About />} />
+        <Route path="/work-rest-hours" element={<IconHorado />} />
+        <Route path="/surveys-inspection" element={<IconArgus />} />
+        <Route path="/ship-guard" element={<IconMaris />} />
+        <Route path="/ship-spares-logistics" element={<IconDoris />} />
+        <Route path="/technology-and-ai" element={<Technology />} />
+        <Route path="/chartering-consultancy" element={<Consultancy />} />
+        <Route path="/marketing" element={<Marketing />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
