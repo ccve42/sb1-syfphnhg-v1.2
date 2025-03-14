@@ -7,28 +7,28 @@ const products = [
     subtitle: 'Work-Rest Hours',
     image: '/img/work.jpg',
     description: 'Monitoring of Work-Rest Hours onboard the ship is vital as it has a direct impact on the safety of the ship, cargo, and crew.',
-    link: '/products/work-rest-hours'
+    link: '/work-rest-hours'
   },
   {
     title: 'Icon Argus',
     subtitle: 'Surveys & Inspections',
     image: '/img/surveys-and-inspections2.jpeg',
     description: 'A specialized mobile application assisting the user to collect and collate data as per different surveying/ inspection requirements.',
-    link: '/products/surveys-inspections'
+    link: '/surveys-inspection'
   },
   {
     title: 'Icon Maris',
     subtitle: 'Ship Guard',
     image: '/img/ship-watch.jpg',
     description: 'Guarding your asset, even more carefully with the help of RFID technology. Cold laid-up ships are manned round the clock by trained watchmen.',
-    link: '/products/ship-guard'
+    link: '/ship-guard'
   },
   {
     title: 'Icon Doris',
     subtitle: 'Ship Spares Logistics',
     image: '/img/Shiplog2.jpg',
     description: 'Ship Spares Logistics is an essential service ensuring ordered spares are onboard the ship on time, which always keeps your Ship moving.',
-    link: '/products/ship-spares-logistics'
+    link: '/ship-spares-logistics'
   }
 ];
 

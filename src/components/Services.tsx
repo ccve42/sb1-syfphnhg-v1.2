@@ -6,19 +6,19 @@ const services = [
     title: 'Chartering Consultancy',
     image: '/img/chartering2.jpg',
     description: 'Icon provides bespoke shipbroking services and advice on dry bulk, project/heavy-lift, IMO and tanker chartering across all markets with emphasis on small to mid-sized institutional clientele.',
-    link: '/services/chartering-consultancy'
+    link: '/chartering-consultancy'
   },
   {
     title: 'Marketing',
     image: '/img/mar.jpg',
     description: 'Constructive disruption creates growth but also value. When done well and paired with transparency, data-driven insights, and consumer personalization, it strengthens the bonds between a brand and its target audience.',
-    link: '/services/marketing'
+    link: '/marketing'
   },
   {
     title: 'Technology & AI',
     image: '/img/ai.jpg',
     description: 'We at Icon Maritech dedicate to empower companies to untap and implement the potential of artificial intelligence, machine learning and latest tech solutions in their business.',
-    link: '/services/technology-ai',
+    link: '/technology-and-ai',
     fullWidth: true
   }
 ];

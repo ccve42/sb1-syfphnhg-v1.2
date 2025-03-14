@@ -130,12 +130,6 @@ const Navbar = () => {
               
               <div className={`dropdown-menu-2025 ${activeDropdown === 'services' ? 'dropdown-active' : ''}`}>
                 <div className="dropdown-wrapper">
-                  <Link to="/technology-and-ai" className="dropdown-item-2025" onClick={() => setActiveDropdown(null)}>
-                    <div className="dropdown-item-content">
-                      <span className="dropdown-item-title">Technology & AI</span>
-                      <span className="dropdown-item-desc">Smart solutions for maritime</span>
-                    </div>
-                  </Link>
                   
                   <Link to="/chartering-consultancy" className="dropdown-item-2025" onClick={() => setActiveDropdown(null)}>
                     <div className="dropdown-item-content">
@@ -150,6 +144,14 @@ const Navbar = () => {
                       <span className="dropdown-item-desc">Strategic maritime marketing</span>
                     </div>
                   </Link>
+
+                  <Link to="/technology-and-ai" className="dropdown-item-2025" onClick={() => setActiveDropdown(null)}>
+                    <div className="dropdown-item-content">
+                      <span className="dropdown-item-title">Technology & AI</span>
+                      <span className="dropdown-item-desc">Smart solutions for maritime</span>
+                    </div>
+                  </Link>
+
                 </div>
               </div>
             </div>
