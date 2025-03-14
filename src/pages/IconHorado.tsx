@@ -1,8 +1,8 @@
 import React from 'react';
-import { useLanguage } from '/src/contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const IconHorado = () => {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <main id="main" className="py-20">
@@ -18,20 +18,20 @@ const IconHorado = () => {
               />
             </div>
             <div>
-              <h4 className="text-2xl font-bold uppercase mb-2">{t('horado.title')}</h4>
-              <span className="text-gray-600 text-sm tracking-[2.5px]">{t(`horado.subtitle${language === 'ja' ? '.ja' : ''}`)}</span>
+              <h4 className="text-2xl font-bold uppercase mb-2">{t('products.horado.title')}</h4>
+              <span className="text-gray-600 text-sm tracking-[2.5px]">{t('products.horado.desc')}</span>
               
-              <p className="mt-6 text-gray-700 leading-relaxed">{t(`horado.description${language === 'ja' ? '.ja' : ''}`)}</p>
+              <p className="mt-6 text-gray-700 leading-relaxed">{t('horado.description')}</p>
 
-              <h4 className="text-xl font-bold mt-8 mb-4">{t(`product.details${language === 'ja' ? '.ja' : ''}`)}</h4>
-              <p className="text-gray-700 leading-relaxed">{t(`horado.details${language === 'ja' ? '.ja' : ''}`)}</p>
+              <h4 className="text-xl font-bold mt-8 mb-4">{t('product.details')}</h4>
+              <p className="text-gray-700 leading-relaxed">{t('horado.details')}</p>
             </div>
           </div>
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h4 className="text-xl font-bold mb-6">{t(`product.features${language === 'ja' ? '.ja' : ''}`)}</h4>
+              <h4 className="text-xl font-bold mb-6">{t('product.features')}</h4>
               <ul className="space-y-3">
                 {[
                   'Violation of rules and regulations identified.',
@@ -68,7 +68,7 @@ const IconHorado = () => {
               />
             </div>
             <div>
-              <h4 className="text-xl font-bold mb-6">BENEFITS</h4>
+              <h4 className="text-xl font-bold mb-6">{t('product.benefits')}</h4>
               <ul className="space-y-3">
                 {[
                   'Demonstrable Compliance of regulations onboard the ship.',
