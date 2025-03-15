@@ -1,75 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main Pages -->
-  <url>
-    <loc>https://sb1-syfphnhg-v1-2.vercel.app/</loc>
-    <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://sb1-syfphnhg-v1-2.vercel.app/about</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sb1-syfphnhg-v1-2.vercel.app/contact</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Product Pages -->
-  <url>
-    <loc>https://sb1-syfphnhg-v1-2.vercel.app/work-rest-hours</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sb1-syfphnhg-v1-2.vercel.app/surveys-inspection</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sb1-syfphnhg-v1-2.vercel.app/ship-guard</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sb1-syfphnhg-v1-2.vercel.app/ship-spares-logistics</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Service Pages -->
-  <url>
-    <loc>https://sb1-syfphnhg-v1-2.vercel.app/technology-and-ai</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sb1-syfphnhg-v1-2.vercel.app/chartering-consultancy</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sb1-syfphnhg-v1-2.vercel.app/marketing</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Legal Pages -->
-  <url>
-    <loc>https://sb1-syfphnhg-v1-2.vercel.app/privacy</loc>
-    <priority>0.3</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-  <url>
-    <loc>https://sb1-syfphnhg-v1-2.vercel.app/terms</loc>
-    <priority>0.3</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-  <url>
-    <loc>https://sb1-syfphnhg-v1-2.vercel.app/cookies</loc>
-    <priority>0.3</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-</urlset> 
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://sb1-syfphnhg-v1-2.vercel.app/sitemap-main.xml</loc>
+    <lastmod>2023-11-01</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://sb1-syfphnhg-v1-2.vercel.app/sitemap-products.xml</loc>
+    <lastmod>2023-11-01</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://sb1-syfphnhg-v1-2.vercel.app/sitemap-services.xml</loc>
+    <lastmod>2023-11-01</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://sb1-syfphnhg-v1-2.vercel.app/sitemap-legal.xml</loc>
+    <lastmod>2023-11-01</lastmod>
+  </sitemap>
+</sitemapindex> 
